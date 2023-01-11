@@ -18,7 +18,7 @@ public class Database {
                     ResultSet rs = statement.executeQuery(selectSql);
 
                     System.out.println("Selecting table in given database...");
-                    System.out.println("id:\ttitle\tselling price\tproduction price\t");
+                    System.out.println("id:\ttitle:\t\ttype:\tselling price:\tproduction price:\t");
                     while(rs.next())
                         System.out.println(rs.getString(1) + "\t" + rs.getString(2) + "\t\t" + rs.getString(3) + "\t\t" + rs.getString(5) + "\t\t" + rs.getString(6));
 
@@ -69,7 +69,7 @@ public class Database {
                     ResultSet rs = statement.executeQuery(selectSql);
 
                     System.out.println("Selecting table in given database...");
-                    System.out.println("id:\tname\tsurname\t");
+                    System.out.println("id:\tname:\tsurname:\t");
                     while(rs.next())
                         System.out.println(rs.getString(1) + "\t" + rs.getString(2) + "\t\t" + rs.getString(3) );
 
@@ -108,7 +108,7 @@ public class Database {
         }
     }
 
-    public void addUser(String name, String surName) {
+    public void addUser(String name, String surname) {
         try {
             Connection connection = DriverManager.getConnection(this.connectionUrl);
 
@@ -116,7 +116,7 @@ public class Database {
                 Statement statement = connection.createStatement();
 
                 try {
-                    String insertSql = "INSERT INTO Users (name, surname) VALUES ('" + name + "','" + surName + "')";
+                    String insertSql = "INSERT INTO Users (name, surname) VALUES ('" + name + "','" + surname + "')";
                     statement.executeUpdate(insertSql);
 
                 } catch (Throwable var8) {

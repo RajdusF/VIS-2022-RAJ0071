@@ -1,0 +1,8 @@
+1|Matej|Brzobohaty
+2|Vendula|Brzobohata
+3|Lukas|Pozdechudy
+4|Martin|Ledvinka
+5|Lubomir|Žacek
+6|Valdemar|Ztratil
+7|Martin|Dedek
+8|Michal|Dobry
